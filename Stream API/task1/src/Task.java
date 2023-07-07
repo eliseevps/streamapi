@@ -7,7 +7,7 @@ public class Task {
 
     private final String title;
 
-    private final  TaskType type;
+    private final TaskType type;
 
     private final LocalDate createdOn;
 
@@ -69,5 +69,18 @@ public class Task {
 
     public void setDueOn(LocalDate dueOn) {
         this.dueOn = dueOn;
+    }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", type=" + type +
+                ", createdOn=" + createdOn +
+                ", done=" + done +
+                ", tags=" + tags +
+                ", dueOn=" + dueOn +
+                '}';
     }
 }

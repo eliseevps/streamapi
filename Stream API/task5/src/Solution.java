@@ -1,3 +1,5 @@
+//Complete
+
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
@@ -27,7 +29,9 @@ public class Solution {
     }
 
     private static Long allReadingTasks(List<List<Task>> tasks) {
-        return null;
-        // Ваш код здесь
+        return tasks.stream()
+                .flatMap(List::stream)
+                .filter(task -> task.getTags().contains("books"))
+                .count();
     }
 }

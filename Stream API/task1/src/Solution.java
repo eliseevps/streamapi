@@ -28,7 +28,7 @@ public class Solution {
         return tasks.stream()
                 .filter(task -> task.getType() == TaskType.READING)
                 .sorted(Comparator.comparing(Task::getCreatedOn))
-                .map(Object::toString)
+                .map(Task::toString)
                 .toList();
     }
 }

@@ -1,3 +1,5 @@
+//Complete
+
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Arrays;
@@ -23,7 +25,9 @@ public class Solution {
     }
 
     private static List<Task> allReadingTasks(List<Task> tasks) {
-        return null;
-        // Ваш код здесь
+        return tasks.stream()
+                .filter(task -> task.getType() == TaskType.READING)
+                .distinct()
+                .toList();
     }
 }
